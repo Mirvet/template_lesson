@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>{{ author}}</h2>
+    {% for book in books %}
+        {% if book.title|length > 18 %}
+            <h4>Name of book: {{ book.title }}</h4>
+        {% else %}
+            <h3>Name of book: {{ book.title }}</h3>
+        {% endif %}
+        <p>Quantity of pages: {{ book.pages }}</p>
+    {% endfor %}
+</body>
+</html>
